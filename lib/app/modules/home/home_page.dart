@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:template_getx/app/core/ui/layouts/userContato.dart';
+import 'package:template_getx/app/core/ui/widgets/Oncoativ_button_gradient_icon.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -8,416 +9,140 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: LayoutBuilder(builder: (_, constraints) {
-        return SingleChildScrollView(
-          child: Stack(
-            children: [
-              Align(
-                alignment: Alignment.topCenter,
-                child: Column(
-                  children: <Widget>[
-                    const SizedBox(
-                      height: 52,
-                    ),
-                    const Text(
-                      'Seja Bem Vindo',
-                      style: TextStyle(color: Color(0xFFADA4A5), fontSize: 12),
-                    ),
-                    const Text(
-                      'Título Principal',
-                      style: TextStyle(
-                          color: Color(0xFF1D1617),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20),
-                    ),
-                    const SizedBox(
-                      height: 32,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 16.0, right: 16.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(.5),
-                              blurRadius: 20.0,
-                              spreadRadius: 0.0,
-                              offset: const Offset(
-                                5.0,
-                                5.0,
-                              ),
-                            )
-                          ],
-                          gradient: const LinearGradient(colors: [
-                            Color(0xFF9DCEFF),
-                            Color(0xFF89CF89),
-                          ]),
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(24.0),
-                          child: Row(
-                            children: <Widget>[
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  const Text(
-                                    'Título qualquer',
-                                    textAlign: TextAlign.start,
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  SizedBox(
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.5,
-                                    child: const Text(
-                                      'Descrição longa com texto',
-                                      textAlign: TextAlign.start,
-                                      style: TextStyle(fontSize: 14),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 12,
-                                  ),
-                                  Container(
-                                    height: 40,
-                                    decoration: BoxDecoration(
-                                      gradient: const LinearGradient(
-                                          begin: Alignment.bottomLeft,
-                                          colors: [
-                                            Color(0x50029D6F),
-                                            Color(0xFF057755),
-                                          ]),
-                                      borderRadius: BorderRadius.circular(20),
-                                    ),
-                                    child: ElevatedButton(
-                                      onPressed: () {},
-                                      style: ElevatedButton.styleFrom(
-                                        primary: Colors.transparent,
-                                        shadowColor: Colors.transparent,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                        ),
-                                      ),
-                                      child: const Text('Botão'),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Column(
-                                children: const <Widget>[
-                                  Icon(
-                                    Icons.flutter_dash_sharp,
-                                    color: Colors.black,
-                                    size: 100,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
+        return SafeArea(
+          child: SingleChildScrollView(
+            child: Stack(
+              children: [
+                Align(
+                  child: Column(
+                    children: <Widget>[
+                      const SizedBox(
+                        height: 24,
                       ),
-                    ),
-                    const SizedBox(
-                      height: 32,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 16, right: 16),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(.5),
-                              blurRadius: 20.0,
-                              spreadRadius: 0.0,
-                              offset: const Offset(
-                                5.0,
-                                5.0,
-                              ),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(20),
-                          gradient: const LinearGradient(colors: [
-                            Color(0xFFFFFFFF),
-                            Color(0xFFFFFFFF),
-                          ]),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Row(
-                            children: [
-                              Column(
-                                children: const <Widget>[
-                                  SizedBox(
-                                    width: 60,
-                                    height: 60,
-                                    child: Padding(
-                                      padding: EdgeInsets.all(2.0),
-                                      child: Icon(
-                                        Icons.flutter_dash_outlined,
-                                        color: Colors.black,
-                                        size: 50,
-                                      ),
-                                    ),
-                                    // decoration: const BoxDecoration(
-                                    //     shape: BoxShape.circle,
-                                    //     color: Color(0xFFe0f2f1)),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                width: 12,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Text(
-                                    'Título',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                  Container(
-                                    margin: const EdgeInsets.only(top: 4),
-                                    height: 28,
-                                    decoration: BoxDecoration(
-                                      gradient: const LinearGradient(
-                                          begin: Alignment.bottomLeft,
-                                          colors: [
-                                            Color(0xFF9DCEFF),
-                                            Color(0xFF89CF89),
-                                          ]),
-                                      borderRadius: BorderRadius.circular(20),
-                                    ),
-                                    child: ElevatedButton(
-                                      onPressed: () {
-                                        Get.toNamed('');
-                                      },
-                                      style: ElevatedButton.styleFrom(
-                                        primary: Colors.transparent,
-                                        shadowColor: Colors.transparent,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                        ),
-                                      ),
-                                      child: const Text(
-                                        'Botão',
-                                        style: TextStyle(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w700),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              )
-                            ],
+                      Row(
+                        children: [
+                          const SizedBox(
+                            width: 20,
                           ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 32,
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.9,
-                      margin: const EdgeInsets.only(bottom: 12),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text(
-                            'Título de algo extenso',
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF4887FF),
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Image.asset(
+                                  'assets/imgs/incons/icon-user.png'),
+                            ),
                           ),
-                          Text(
-                            'Subtítulo com texto grande',
+                          const SizedBox(
+                            width: 12,
+                          ),
+                          const Text(
+                            'SALVAKI',
                             style: TextStyle(
-                                fontSize: 14, fontWeight: FontWeight.w400),
+                                color: Color(0xFF000000),
+                                fontWeight: FontWeight.w900,
+                                fontSize: 28),
                           ),
                         ],
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 16, right: 16),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(.5),
-                              blurRadius: 20.0,
-                              spreadRadius: 0.0,
-                              offset: const Offset(
-                                5.0,
-                                5.0,
-                              ),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(20),
-                          gradient: const LinearGradient(colors: [
-                            Color(0xFFFFFFFF),
-                            Color(0xFFFFFFFF),
-                          ]),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.only(
-                              top: 16, bottom: 16, left: 16, right: 16),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: const <Widget>[
-                                  Text(
-                                    'Outro título',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  Container(
-                                    height: 36,
-                                    decoration: BoxDecoration(
-                                      gradient: const LinearGradient(
-                                          begin: Alignment.bottomLeft,
-                                          colors: [
-                                            Color(0xFF9DCEFF),
-                                            Color(0xFF89CF89),
-                                          ]),
-                                      borderRadius: BorderRadius.circular(20),
-                                    ),
-                                    child: ElevatedButton(
-                                      onPressed: () {},
-                                      style: ElevatedButton.styleFrom(
-                                        primary: Colors.transparent,
-                                        shadowColor: Colors.transparent,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                        ),
-                                      ),
-                                      child: const Text(
-                                        'Botão',
-                                        style: TextStyle(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w700),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
+                      const SizedBox(
+                        height: 32,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            fillColor: const Color(0xFFF4F6F9),
+                            prefixIcon: const Icon(
+                              Icons.search,
+                              color: Colors.grey,
+                            ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(12.0),
+                            ),
+                            hintText: 'Procurar contato',
                           ),
                         ),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 32,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 16.0, right: 16.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(.5),
-                              blurRadius: 20.0,
-                              spreadRadius: 0.0,
-                              offset: const Offset(
-                                5.0,
-                                5.0,
-                              ),
-                            )
-                          ],
-                          gradient: const LinearGradient(colors: [
-                            Color(0xFF9DCEFF),
-                            Color(0xFF89CF89),
-                          ]),
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(24.0),
-                          child: Row(
-                            children: <Widget>[
-                              Column(
-                                children: const <Widget>[
-                                  Icon(
-                                    Icons.flutter_dash_sharp,
-                                    color: Colors.black,
-                                    size: 100,
-                                  ),
-                                ],
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.end,
-                                children: <Widget>[
-                                  const Text(
-                                    'Título qualquer',
-                                    textAlign: TextAlign.end,
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  SizedBox(
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.5,
-                                    child: const Text(
-                                      'Descrição longa com texto',
-                                      textAlign: TextAlign.end,
-                                      style: TextStyle(fontSize: 14),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 12,
-                                  ),
-                                  Container(
-                                    height: 40,
-                                    decoration: BoxDecoration(
-                                      gradient: const LinearGradient(
-                                          begin: Alignment.bottomLeft,
-                                          colors: [
-                                            Color(0x50029D6F),
-                                            Color(0xFF057755),
-                                          ]),
-                                      borderRadius: BorderRadius.circular(20),
-                                    ),
-                                    child: ElevatedButton(
-                                      onPressed: () {},
-                                      style: ElevatedButton.styleFrom(
-                                        primary: Colors.transparent,
-                                        shadowColor: Colors.transparent,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                        ),
-                                      ),
-                                      child: const Text('Botão'),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
+                      const SizedBox(
+                        height: 32,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                        child: WidgetButtonGradientIcon(
+                          label: 'Novo Contato',
+                          onPressed: () {},
+                          icon: const Icon(Icons.people_rounded),
                         ),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 32,
-                    ),
-                  ],
+                      const SizedBox(
+                        height: 32,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                        child: Row(
+                          children: const [
+                            Text(
+                              'Últimos Contatos',
+                              textAlign: TextAlign.start,
+                              style: TextStyle(
+                                  fontSize: 26, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 16.0, right: 16.0),
+                        child: LayoutUserContatoHome(),
+                      ),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 16.0, right: 16.0),
+                        child: LayoutUserContatoHome(),
+                      ),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 16.0, right: 16.0),
+                        child: LayoutUserContatoHome(),
+                      ),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 16.0, right: 16.0),
+                        child: LayoutUserContatoHome(),
+                      ),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 16.0, right: 16.0),
+                        child: LayoutUserContatoHome(),
+                      ),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 16.0, right: 16.0),
+                        child: LayoutUserContatoHome(),
+                      ),
+                      const SizedBox(
+                        height: 24,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         );
       }),
