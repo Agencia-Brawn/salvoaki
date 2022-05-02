@@ -24,8 +24,8 @@ class OncoativButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(24),
         gradient: const LinearGradient(
           colors: [
-            Color.fromRGBO(157, 206, 255, 0.8),
-            Color.fromRGBO(137, 207, 137, 0.6),
+            Color.fromRGBO(41, 114, 204, 0.8),
+            Color.fromRGBO(157, 191, 255, 0.6),
           ],
           begin: Alignment.centerLeft,
           end: Alignment.centerRight,
