@@ -8,7 +8,7 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: Stack(
         children: [
           Align(
@@ -16,10 +16,26 @@ class SplashPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(40),
+                    gradient: const LinearGradient(
+                      begin: Alignment.centerRight,
+                      end: Alignment.centerLeft,
+                      colors: <Color>[Color(0xFF2972FE), Color(0xFF9DBFFF)],
+                    ),
+                  ),
+                  width: 140,
+                  height: 140,
+                  child: Image.asset('assets/imgs/splash/user.png'),
+                ),
+                const SizedBox(
+                  height: 14,
+                ),
                 const Text(
-                  'Template Getx',
+                  'SALVAKI',
                   style: TextStyle(
-                      color: Color(0xFF1D1617),
+                      color: Color(0xFF1A69FF),
                       fontWeight: FontWeight.bold,
                       fontSize: 48),
                 ),
