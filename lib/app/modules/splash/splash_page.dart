@@ -27,7 +27,7 @@ class SplashPage extends StatelessWidget {
                   ),
                   width: 140,
                   height: 140,
-                  child: Image.asset('assets/imgs/splash/user.png'),
+                  child: Image.asset('assets/imgs/incons/user.png'),
                 ),
                 const SizedBox(
                   height: 14,
